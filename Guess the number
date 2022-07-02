@@ -1,0 +1,21 @@
+import random
+
+def guess_the_num(x):
+    print("\n")
+    print("Lets play Guess the number")
+
+    random_num=random.randint(0,x)
+
+    num_guess=0
+    while True:
+        guess=int(input(f"Guess a number between 0 and {x}: "))
+        num_guess+=1
+
+        if guess== random_num:
+            print(f"Congrats , the number is {random_num}")
+            break
+        elif guess<random_num:
+            print("Number is too low")
+        else:
+            print("Number is too high")
+    print(f"\n You took {num_guess} chances to guess the number ")

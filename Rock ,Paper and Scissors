@@ -1,0 +1,28 @@
+import random
+def rock():
+    print("\n Lets play Rock, Paper , Scissors ")
+    r="Rock"
+    p="Paper"
+    s="Scissors"
+    choices=[r,p,s]
+
+    Player=input(f"Enter a choice ({r},{p},{s}): ")
+
+    if Player not in choices:
+        print("Invalid Choice")
+        return
+    Computer=random.choice(choices)
+
+    print(f"User choose {Player} , Computer choose {Computer} ")
+    print("\n")
+
+    if Player== Computer:
+        print("Tie")
+    elif (Player==r and Computer ==s):
+        print("Rock Smashes Scissors  You Won :-)")
+    elif (Player==p and Computer==r):
+        print("Paper Engulf the Rock You Won :-) ")
+    elif (Player==s and Computer==p):
+        print("Scissors Chops Paper You Won :-)")
+    else:
+        print("You Lose :-(")

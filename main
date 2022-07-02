@@ -1,0 +1,32 @@
+from gtn import guess_the_num
+from RPS import rock
+from Wordle import wordle
+from connect_four import ConnectFour
+from tictactoe import TicTacToe
+while True:
+    print("\n")
+    text="""Mini Games!!!!
+    - Guess The Number (1)
+    - Rock,Paper ,Scissors (2)
+    - Wordle (3)
+    - ConnectFour (4)
+    - Tic Tac Toe (5)
+Select a game (press a number or 'q' to quit):"""
+    value=input(text)
+    if value =="1":
+        guess_the_num(100)
+        n=int(input("\n Enter the upper bound value: "))
+        guess_the_num(n)
+    elif value == "2":
+        rock()
+    elif value == "3":
+        game=wordle()
+        game.play()
+    elif value == "4":
+        game=ConnectFour()
+        game.play()
+    elif value == "5":
+        game=TicTacToe()
+        game.play()
+    elif value =="q":
+        break
